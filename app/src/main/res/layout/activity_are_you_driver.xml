@@ -17,7 +17,11 @@
         android:contentDescription="@string/driver_button"
         android:maxWidth="42dp"
         android:maxHeight="42dp"
+<<<<<<< HEAD
         android:onClick="amDriver"
+=======
+        android:onClick="driver"
+>>>>>>> b5c67bcdad457d8ab5b48d866f7ccac2aa79053c
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/riderButton"
         app:layout_constraintEnd_toEndOf="parent"
