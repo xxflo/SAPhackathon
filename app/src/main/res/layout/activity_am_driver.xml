@@ -25,11 +25,8 @@
 
             <TextView
                 android:id="@+id/numSeats"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@android:color/background_dark"
                 android:fontFamily="monospace"
                 android:text="# Seats Available"
@@ -41,14 +38,11 @@
 
             <EditText
                 android:id="@+id/numSeatsAvailable"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:ems="10"
                 android:fontFamily="monospace"
+                android:hint="Enter Number of Seats Available"
                 android:inputType="number"
                 app:layout_constraintBottom_toTopOf="@+id/editTo"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -57,11 +51,8 @@
 
             <TextView
                 android:id="@+id/from"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@android:color/background_dark"
                 android:fontFamily="monospace"
                 android:text="From?"
@@ -75,10 +66,6 @@
                 android:id="@+id/editFrom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:ems="10"
                 android:fontFamily="monospace"
                 android:hint="Choose Starting Point"
@@ -90,10 +77,8 @@
 
             <TextView
                 android:id="@+id/to"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@android:color/background_dark"
                 android:fontFamily="monospace"
                 android:text="To?"
@@ -106,8 +91,6 @@
                 android:id="@+id/editTo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:fontFamily="monospace"
                 android:hint="Choose Destination"
@@ -153,28 +136,42 @@
                 android:headerBackground="@android:color/black"
                 android:padding="10dp" />
 
-            <ImageButton
-                android:id="@+id/submitButton"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                android:background="#00000000"
-                android:contentDescription="TODO"
-                android:onClick="nextButton"
-                android:scaleType="fitCenter"
-                android:translationX="130dp"
-                app:srcCompat="@drawable/nextbutton" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="backButton"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/backbutton" />
+
+                <ImageButton
+                    android:id="@+id/submitButton"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="nextButton"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/nextbutton" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteY="490dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:visibility="invisible"></ListView>
 
     <LinearLayout
         android:id="@+id/message"

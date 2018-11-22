@@ -25,11 +25,8 @@
 
             <TextView
                 android:id="@+id/from"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@android:color/background_dark"
                 android:fontFamily="monospace"
                 android:text="From?"
@@ -58,10 +55,8 @@
 
             <TextView
                 android:id="@+id/to"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp"
                 android:background="@android:color/background_dark"
                 android:fontFamily="monospace"
                 android:text="To?"
@@ -121,16 +116,34 @@
                 android:headerBackground="@android:color/black"
                 android:padding="10dp" />
 
-            <ImageButton
-                android:id="@+id/nextButton"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                android:background="#00000000"
-                android:contentDescription="TODO"
-                android:onClick="nextButton"
-                android:scaleType="fitCenter"
-                android:translationX="130dp"
-                app:srcCompat="@drawable/nextbutton" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="backButton"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/backbutton" />
+
+                <ImageButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:onClick="nextButton"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/nextbutton" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
