@@ -8,11 +8,18 @@ import android.widget.ImageButton;
 
 public class AreYouDriver extends AppCompatActivity {
     ImageButton needRide;
+    ImageButton driver;
 
     public void needRide(View view){
         Intent intent = new Intent(getApplicationContext(), NeedRide.class);
         startActivityForResult(intent, 100);
     }
+
+    public void driver(View view){
+        Intent intent = new Intent(getApplicationContext(), AmDriver.class);
+        startActivityForResult(intent, 100);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,6 @@ public class AreYouDriver extends AppCompatActivity {
         setContentView(R.layout.activity_are_you_driver);
 
         needRide = findViewById(R.id.riderButton);
+        driver = findViewById(R.id.driverButton);
     }
 }
