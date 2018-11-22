@@ -1,51 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.kessr.saphackathon.CreateSocialEvents">
 
-    <ImageButton
-        android:id="@+id/addImage"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00000000"
-        app:srcCompat="@drawable/addimage" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="122dp" />
+        <ImageButton
+            android:id="@+id/addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/image" />
 
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date" />
+        <EditText
+            android:id="@+id/eventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Event Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
 
-    <com.google.android.gms.maps.MapView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Event Description"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
 
-    <EditText
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="time" />
+        <EditText
+            android:id="@+id/numPpl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Number of People"
+            android:inputType="number"
+            android:textAlignment="center" />
 
-    <TimePicker
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/carpool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:text="Carpool Option"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:headerBackground="@android:color/background_dark"
+            android:padding="10dp" />
+
+        <TimePicker
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:headerBackground="@android:color/black" />
+
+    </LinearLayout>
+
+</ScrollView>
