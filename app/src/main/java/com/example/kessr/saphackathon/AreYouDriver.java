@@ -14,6 +14,11 @@ public class AreYouDriver extends AppCompatActivity {
         startActivityForResult(intent, 100);
     }
 
+    public void amDriver(View view){
+        Intent intent = new Intent(getApplicationContext(), AmDriver.class);
+        startActivityForResult(intent, 100);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
