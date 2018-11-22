@@ -5,7 +5,7 @@ public class connDB {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/hackathon","root","bobobo");
+            "jdbc:mysql://localhost:3306/hackathon","root","root");
 
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("select * from users");
