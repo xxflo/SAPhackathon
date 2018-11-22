@@ -8,10 +8,14 @@ import android.widget.ImageButton;
 
 public class AreYouDriver extends AppCompatActivity {
     ImageButton needRide;
+    Intent intent;
 
     public void needRide(View view){
-        Intent intent = new Intent(getApplicationContext(), NeedRide.class);
+        intent = new Intent(getApplicationContext(), NeedRide.class);
         startActivityForResult(intent, 100);
+    }
+    public void amDriver(View view){
+        // TODO: get Floris' codes
     }
 
     @Override

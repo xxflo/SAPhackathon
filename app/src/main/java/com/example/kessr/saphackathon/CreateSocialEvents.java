@@ -16,7 +16,7 @@ public class CreateSocialEvents extends AppCompatActivity {
     Spinner dropdown;
     int var = 1; // 1 (Social)/ 2 (Carpool)/ 3(Other)
 
-    public void goBack(View view){
+    public void goBack(View view){ // to main screen (different activity)
         //TODO: go back to screen before
     }
 
@@ -25,18 +25,21 @@ public class CreateSocialEvents extends AppCompatActivity {
         imageButton.setImageResource(R.drawable.event);
     }
 
+    // After selecting event type
     public void goNext(View view){
         String text = dropdown.getSelectedItem().toString();
         if (text.equals("Social")){
-            selectEventType.setVisibility(View.INVISIBLE);
-            scrollViews.setVisibility(View.VISIBLE);
+            var = 1;
+            scrollViews = findViewById(R.id.socialEvent);
         } else if (text.equals("Carpool")) {
             var = 2;
+            scrollViews = findViewById(R.id.carpoolEvent);
         } else {
             var = 3;
-            selectEventType.setVisibility(View.INVISIBLE);
-            scrollViews.setVisibility(View.VISIBLE);
+            scrollViews = findViewById(R.id.otherEvent);
         }
+        selectEventType.setVisibility(View.INVISIBLE);
+        scrollViews.setVisibility(View.VISIBLE);
 
     }
 
@@ -48,6 +51,8 @@ public class CreateSocialEvents extends AppCompatActivity {
         selectEventType.setVisibility(View.VISIBLE);
         scrollViews.setVisibility(View.INVISIBLE);
     }
+
+    // CREATED EVENT
     public void goNextTwo(View view){
         //TODO: Event is created. Add to Event List
         if (var==1) { //social event
