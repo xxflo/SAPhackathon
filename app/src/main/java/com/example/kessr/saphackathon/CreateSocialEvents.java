@@ -1,5 +1,6 @@
 package com.example.kessr.saphackathon;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +34,8 @@ public class CreateSocialEvents extends AppCompatActivity {
             scrollViews = findViewById(R.id.socialEvent);
         } else if (text.equals("Carpool")) {
             var = 2;
-            scrollViews = findViewById(R.id.carpoolEvent);
+            Intent intent = new Intent(getApplicationContext(), AreYouDriver.class);
+            startActivityForResult(intent, 100);
         } else {
             var = 3;
             scrollViews = findViewById(R.id.otherEvent);

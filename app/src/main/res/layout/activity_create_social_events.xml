@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter Location"
-                android:inputType="number"
+                android:inputType="textPostalAddress"
                 android:textAlignment="center" />
 
             <TextView
@@ -214,192 +214,6 @@
 
                 <ImageButton
                     android:id="@+id/nextButton2"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="#00000000"
-                    android:onClick="goNextTwo"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/nextbutton" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/carpoolEvent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="visible">
-
-            <ImageButton
-                android:id="@+id/addImage2"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:background="#00000000"
-                android:onClick="addImage"
-                android:scaleType="fitCenter"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image" />
-
-            <TextView
-                android:id="@+id/a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Carpool Event Name:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/eventName2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Enter Event Name"
-                android:inputType="textPersonName"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/s"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Carpool Description:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/description2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Enter Event Description"
-                android:inputType="text"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/d"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Pickup Location:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/description5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Enter Pickup Location"
-                android:inputType="text"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/d2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Destination:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/description6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Enter Destination"
-                android:inputType="text"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/d3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Number of seats:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/location2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Enter Number of Seats Available"
-                android:inputType="number"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/f"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Pick Date:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <DatePicker
-                android:id="@+id/datePicker2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:headerBackground="@android:color/background_dark"
-                android:padding="10dp" />
-
-            <TextView
-                android:id="@+id/fd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/background_dark"
-                android:fontFamily="monospace"
-                android:text="Pick Time:"
-                android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
-
-            <TimePicker
-                android:id="@+id/time2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:headerBackground="@android:color/black"
-                android:padding="10dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/backButton3"
-                    android:layout_width="200dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:background="#00000000"
-                    android:onClick="goBackTwo"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/backbutton" />
-
-                <ImageButton
-                    android:id="@+id/nextButton3"
                     android:layout_width="200dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
@@ -491,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter Location"
-                android:inputType="number"
+                android:inputType="textPostalAddress"
                 android:textAlignment="center" />
 
             <TextView

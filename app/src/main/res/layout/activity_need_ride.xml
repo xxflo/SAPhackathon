@@ -6,122 +6,133 @@
     android:layout_height="match_parent"
     tools:context="com.example.kessr.saphackathon.NeedRide">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/from"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/background_dark"
-            android:fontFamily="monospace"
-            android:text="From?"
-            android:textColor="@android:color/background_light"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/to"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editFrom"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:ems="10"
-            android:fontFamily="monospace"
-            android:hint="Choose Starting Point"
-            android:inputType="textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/editTo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/from"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/to"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:background="@android:color/background_dark"
-            android:fontFamily="monospace"
-            android:text="To?"
-            android:textColor="@android:color/background_light"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/timeLeaving"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/editTo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:ems="10"
-            android:fontFamily="monospace"
-            android:hint="Choose Destination"
-            android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/to"
-            tools:layout_editor_absoluteY="192dp" />
-
-        <TextView
-            android:id="@+id/timeLeaving"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:background="@android:color/background_dark"
-            android:fontFamily="monospace"
-            android:text="Time Leaving?"
-            android:textColor="@android:color/background_light"
-            android:textSize="20sp"
+            android:orientation="vertical"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/editTime"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:fontFamily="monospace"
-            android:hint="Select Time"
-            android:inputType="time"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/timeLeaving"
-            app:layout_constraintTop_toBottomOf="@+id/editTo" />
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/background_dark"
+                android:fontFamily="monospace"
+                android:text="From?"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/to"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="150dp"
-            android:layout_height="90dp"
-            android:background="#00000000"
-            android:contentDescription="TODO"
-            android:onClick="nextButton"
-            android:scaleType="fitCenter"
-            android:translationX="130dp"
-            app:srcCompat="@drawable/nextbutton" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/editFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:fontFamily="monospace"
+                android:hint="Choose Starting Point"
+                android:inputType="textPostalAddress"
+                app:layout_constraintBottom_toTopOf="@+id/editTo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/from"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/background_dark"
+                android:fontFamily="monospace"
+                android:text="To?"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/pickDate"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:fontFamily="monospace"
+                android:hint="Choose Destination"
+                android:inputType="textPostalAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/to"
+                tools:layout_editor_absoluteY="192dp" />
+
+            <TextView
+                android:id="@+id/pickDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_dark"
+                android:fontFamily="monospace"
+                android:text="Pick Date:"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+
+            <DatePicker
+                android:id="@+id/datePicker3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:headerBackground="@android:color/background_dark"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_dark"
+                android:fontFamily="monospace"
+                android:text="Pick Time:"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp" />
+
+            <TimePicker
+                android:id="@+id/time3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:headerBackground="@android:color/black"
+                android:padding="10dp" />
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:background="#00000000"
+                android:contentDescription="TODO"
+                android:onClick="nextButton"
+                android:scaleType="fitCenter"
+                android:translationX="130dp"
+                app:srcCompat="@drawable/nextbutton" />
+        </LinearLayout>
+    </ScrollView>
 
     <ListView
         android:id="@+id/listView"
