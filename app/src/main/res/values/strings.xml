@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SAP hackathon</string>
+    <string name="driver_button">Driver Button</string>
+    <string name="rider_button">Rider Button</string>
 </resources>
