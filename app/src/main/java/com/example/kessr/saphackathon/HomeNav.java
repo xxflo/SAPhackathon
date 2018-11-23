@@ -14,6 +14,19 @@ public class HomeNav extends AppCompatActivity {
         setContentView(R.layout.activity_home_nav);
     }
 
+    public void carPoolEvent(View view){
+
+    }
+
+    public void funDayEvent(View view){
+
+    }
+
+    public void funDayCarPool(View view){
+
+
+    }
+
     public void goHome(View view){
         Intent intent = new Intent(getApplicationContext(), HomeNav.class);
         startActivityForResult(intent, 100);

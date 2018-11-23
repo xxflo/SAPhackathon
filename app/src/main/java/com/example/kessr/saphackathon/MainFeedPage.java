@@ -36,8 +36,6 @@ public class MainFeedPage extends AppCompatActivity {
         ListView myListView = (ListView) findViewById(R.id.eventFeedView);
         myListView.setAdapter(myAdaptor);
 
-
     }
-
 
 }
