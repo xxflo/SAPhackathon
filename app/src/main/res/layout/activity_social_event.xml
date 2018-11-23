@@ -52,7 +52,7 @@
 
     <ScrollView
         android:id="@+id/socialEvent"
-        android:layout_width="325dp"
+        android:layout_width="wrap_content"
         android:layout_height="312dp"
         android:layout_marginBottom="8dp"
         android:visibility="visible"
@@ -67,7 +67,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="visible"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:id="@+id/eventDescription"
@@ -140,7 +145,7 @@
 
                 <TextView
                     android:id="@+id/Sub-events"
-                    android:layout_width="268dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:fontFamily="monospace"
                     android:text=" Sub-events"
@@ -157,9 +162,10 @@
                 <ImageButton
                     android:id="@+id/imageButton4"
                     android:layout_width="53dp"
-                    android:layout_height="34dp"
+                    android:layout_height="26dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
+                    android:onClick="goBackToCreate"
                     android:scaleType="fitStart"
                     android:scaleX="0.9"
                     app:srcCompat="@drawable/addbuton"
