@@ -18,9 +18,9 @@ public class HomeNav extends AppCompatActivity {
     TextView textView7;
     TextView textView8;
 
-    Button button3;
-    Button button4;
-    Button button5;
+    ImageButton button3;
+    ImageButton button4;
+    ImageButton button5;
 
     LinearLayout bottomLinLay;
     LinearLayout navbar;
@@ -70,17 +70,17 @@ public class HomeNav extends AppCompatActivity {
 
     public void carPoolEvent(View view){
 
-        textView5.setVisibility(View.VISIBLE);
-        textView6.setVisibility(View.VISIBLE);
-        textView7.setVisibility(View.VISIBLE);
-        textView8.setVisibility(View.VISIBLE);
+        textView5.setVisibility(View.INVISIBLE);
+        textView6.setVisibility(View.INVISIBLE);
+        textView7.setVisibility(View.INVISIBLE);
+        textView8.setVisibility(View.INVISIBLE);
 
-        button3.setVisibility(View.VISIBLE);
-        button4.setVisibility(View.VISIBLE);
-        button5.setVisibility(View.VISIBLE);
+        button3.setVisibility(View.INVISIBLE);
+        button4.setVisibility(View.INVISIBLE);
+        button5.setVisibility(View.INVISIBLE);
 
-        bottomLinLay.setVisibility(View.VISIBLE);
-        navbar.setVisibility(View.VISIBLE);
+        bottomLinLay.setVisibility(View.INVISIBLE);
+        navbar.setVisibility(View.INVISIBLE);
 
         event1.setVisibility(View.VISIBLE);
         event1Image.setVisibility(View.VISIBLE);
@@ -90,17 +90,17 @@ public class HomeNav extends AppCompatActivity {
 
     public void funDayEvent(View view){
 
-        textView5.setVisibility(View.VISIBLE);
-        textView6.setVisibility(View.VISIBLE);
-        textView7.setVisibility(View.VISIBLE);
-        textView8.setVisibility(View.VISIBLE);
+        textView5.setVisibility(View.INVISIBLE);
+        textView6.setVisibility(View.INVISIBLE);
+        textView7.setVisibility(View.INVISIBLE);
+        textView8.setVisibility(View.INVISIBLE);
 
-        button3.setVisibility(View.VISIBLE);
-        button4.setVisibility(View.VISIBLE);
-        button5.setVisibility(View.VISIBLE);
+        button3.setVisibility(View.INVISIBLE);
+        button4.setVisibility(View.INVISIBLE);
+        button5.setVisibility(View.INVISIBLE);
 
-        bottomLinLay.setVisibility(View.VISIBLE);
-        navbar.setVisibility(View.VISIBLE);
+        bottomLinLay.setVisibility(View.INVISIBLE);
+        navbar.setVisibility(View.INVISIBLE);
 
         event2.setVisibility(View.VISIBLE);
         event2Image.setVisibility(View.VISIBLE);
@@ -109,17 +109,17 @@ public class HomeNav extends AppCompatActivity {
 
     public void funDayCarPool(View view){
 
-        textView5.setVisibility(View.VISIBLE);
-        textView6.setVisibility(View.VISIBLE);
-        textView7.setVisibility(View.VISIBLE);
-        textView8.setVisibility(View.VISIBLE);
+        textView5.setVisibility(View.INVISIBLE);
+        textView6.setVisibility(View.INVISIBLE);
+        textView7.setVisibility(View.INVISIBLE);
+        textView8.setVisibility(View.INVISIBLE);
 
-        button3.setVisibility(View.VISIBLE);
-        button4.setVisibility(View.VISIBLE);
-        button5.setVisibility(View.VISIBLE);
+        button3.setVisibility(View.INVISIBLE);
+        button4.setVisibility(View.INVISIBLE);
+        button5.setVisibility(View.INVISIBLE);
 
-        bottomLinLay.setVisibility(View.VISIBLE);
-        navbar.setVisibility(View.VISIBLE);
+        bottomLinLay.setVisibility(View.INVISIBLE);
+        navbar.setVisibility(View.INVISIBLE);
 
         event3.setVisibility(View.VISIBLE);
         event3Image.setVisibility(View.VISIBLE);
