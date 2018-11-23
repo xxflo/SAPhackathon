@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -13,11 +14,13 @@ import android.widget.TextView;
 
 public class NeedRide extends AppCompatActivity {
 
-    int[] DRIVER_IMAGES = {R.drawable.usericon};
-    String[] DRIVER_NAMES = {"Bob"};
-    String[] DRIVER_DESCRIPTION = {"Bob is planning to leave at 8am. Meet at lobby, etc etc"};
+    int[] DRIVER_IMAGES = {R.drawable.usericon,R.drawable.usericon};
+    String[] DRIVER_NAMES = {"Bob","Sue"};
+    String[] DRIVER_DESCRIPTION = {"Bob leaves at 8am. etc etc","yeah"};
     LinearLayout linLay;
     ListView listView;
+    boolean joined= false;
+    LinearLayout buttons;
 
     public void backButton(View view){
         Intent returnIntent = new Intent();
@@ -25,29 +28,49 @@ public class NeedRide extends AppCompatActivity {
         finish();
     }
 
+    public void backButton222(View view){
+        linLay.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.INVISIBLE);
+        buttons.setVisibility(View.INVISIBLE);
+    }
+
+    public void lastNextButton(View view){
+        // TODO: goto main screen
+    }
+    public void nextButton222(View view){
+        //TODO: selected drivers. Joined carpool event
+        listView.setVisibility(View.INVISIBLE);
+        LinearLayout message2 = findViewById(R.id.message2);
+        message2.setVisibility(View.VISIBLE);
+        buttons.setVisibility(View.INVISIBLE);
+        ImageButton last = findViewById(R.id.nextButtonLast);
+        last.setVisibility(View.VISIBLE);
+    }
+
     public void nextButton(View view){
         linLay = findViewById(R.id.linearLayout);
         linLay.setVisibility(View.INVISIBLE);
 
         if (DRIVER_NAMES.length == 0) {
+            // TODO: ADD EVENT TO EVENT LIST//////////////
             LinearLayout message = findViewById(R.id.message);
             message.setVisibility(View.VISIBLE);
-            // TODO: ADD EVENT TO EVENT LIST//////////////
         }else{
             TextView textView = new TextView(this);
             textView.setText("List of Available Drivers");
             listView.addHeaderView(textView);
             listView.setVisibility(View.VISIBLE);
+            buttons.setVisibility(View.VISIBLE);
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_need_ride);
-
-        listView = (ListView)findViewById(R.id.listView);
-
+        buttons = findViewById(R.id.buttons);
+        listView = findViewById(R.id.listView);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        listView.setSelector(android.R.color.darker_gray);
         //TODO: get driver info from database here and add to DRIVER_IMAGES DRIVER_NAMES DRIVER_DESC
 
         CustomAdapter customAdapter = new CustomAdapter();

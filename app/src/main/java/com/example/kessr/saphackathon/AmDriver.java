@@ -3,32 +3,62 @@ package com.example.kessr.saphackathon;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class AmDriver extends AppCompatActivity {
+    ScrollView linLay;
+    LinearLayout buttons;
+    TextView msg;
+    ImageButton last;
+
+    public void lastNextButton(View view){
+        // TODO: goto main screen
+    }
+
+    public void goBack(View view){
+        linLay.setVisibility(View.VISIBLE);
+        listView.setVisibility(View.INVISIBLE);
+        buttons.setVisibility(View.INVISIBLE);
+    }
+
+    public void goNext(View view){
+        Log.i("info","hi");
+        //TODO: selected drivers. Joined carpool event
+        listView.setVisibility(View.INVISIBLE);
+        msg.setVisibility(View.VISIBLE);
+        buttons.setVisibility(View.INVISIBLE);
+        last.setVisibility(View.VISIBLE);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_am_driver);
-
+        last = findViewById(R.id.nextButtonLast);
+        linLay = findViewById(R.id.linLay);
+        buttons = findViewById(R.id.pleaseWork);
+        msg = findViewById(R.id.created);
         listView = (ListView)findViewById(R.id.listView);
-
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        listView.setSelector(android.R.color.darker_gray);
         //TODO: get driver info from database here and add to DRIVER_IMAGES DRIVER_NAMES DRIVER_DESC
 
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
     }
 
-    int[] RIDER_IMAGES = {R.drawable.usericon};
-    String[] RIDER_NAMES = {"Alice"};
-    String[] RIDER_DESCRIPTION = {"Alice to leave at 8am."};
+    int[] RIDER_IMAGES = {R.drawable.usericon, R.drawable.usericon};
+    String[] RIDER_NAMES = {"Alice","Tim"};
+    String[] RIDER_DESCRIPTION = {"Alice to leave at 8am.","Tim Hortons"};
     LinearLayout layout;
     ListView listView;
 
@@ -50,14 +80,15 @@ public class AmDriver extends AppCompatActivity {
         //todo: if passengers > 0, populate the passengers in need page(info: time leaving, distance from you); set event listeners for passengers selected; press ok
 
         if (RIDER_NAMES.length == 0) {
-            LinearLayout message = findViewById(R.id.message);
-            message.setVisibility(View.VISIBLE);
+            msg.setVisibility(View.VISIBLE);
+            last.setVisibility(View.VISIBLE);
             // TODO: ADD EVENT TO EVENT LIST//////////////
         }else{
             TextView textView = new TextView(this);
             textView.setText("Passengers in Need");
             listView.addHeaderView(textView);
             listView.setVisibility(View.VISIBLE);
+            buttons.setVisibility(View.VISIBLE);
         }
 
     }
