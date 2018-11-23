@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -67,10 +69,15 @@ public class CreateSocialEvents extends AppCompatActivity {
         EditText location = findViewById(R.id.location);
         String eventLocation = location.getText().toString();
 
+        TimePicker tp = findViewById(R.id.timePicker);
+        DatePicker dp = findViewById(R.id.datePicker);
+        String eventTime = dp.getMonth() + "-" + dp.getDayOfMonth() + "," + tp.getHour() + ":" + tp.getMinute();
+
         HashMap<String,String> info = new HashMap<>();
         info.put("event_name", eventName);
         info.put("event_desc", eventDesc);
         info.put("event_location", eventLocation);
+        info.put("event_time", eventTime);
 
         intent.putExtra("data",info);
         startActivityForResult(intent, 100);

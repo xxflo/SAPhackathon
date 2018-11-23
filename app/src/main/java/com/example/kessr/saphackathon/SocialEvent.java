@@ -26,12 +26,18 @@ public class SocialEvent extends AppCompatActivity implements Event{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social_event);
 
-//        // Get the transferred data from source activity.
         Intent intent = getIntent();
-//        String message = intent.getStringExtra("message");
         HashMap<String,String> data = (HashMap<String, String>) intent.getSerializableExtra("data");
-        TextView textView = (TextView)findViewById(R.id.eventDescription);
-        textView.setText("  "+data.get("event_desc"));
+        TextView eventName = (TextView)findViewById(R.id.eventName);
+        eventName.setText("  "+data.get("event_name"));
+        TextView description = (TextView)findViewById(R.id.Description);
+        description.setText("  "+data.get("event_desc"));
+        TextView location = (TextView)findViewById(R.id.Location);
+        location.setText("  "+ data.get("event_location"));
+        TextView time = (TextView)findViewById(R.id.Time);
+        time.setText("  "+ data.get("event_time"));
+
+
     }
 
     public void goBackToCreate(View view){
