@@ -11,9 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="10dp"></ListView>
+        android:visibility="invisible">
+    </ListView>
 
     <LinearLayout
         android:id="@+id/pleaseWork"
