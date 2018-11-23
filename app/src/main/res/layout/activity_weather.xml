@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kessr.saphackathon.WeatherInformation">
+
+    <ImageView
+        android:id="@+id/weatherDay"
+        android:layout_width="411dp"
+        android:layout_height="309dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sunnyImageView"
+        app:srcCompat="@drawable/bluesky" />
+
+    <ImageView
+        android:id="@+id/weatherNight"
+        android:layout_width="411dp"
+        android:layout_height="272dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sunnyImageView"
+        app:srcCompat="@drawable/nightsky" />
+
+    <ImageView
+        android:id="@+id/rainImageView"
+        android:layout_width="187dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rain" />
+
+    <ImageView
+        android:id="@+id/cloudyImageView"
+        android:layout_width="265dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/weatherNight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sunnyImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cloudy" />
+
+    <ImageView
+        android:id="@+id/sunnyImageView"
+        android:layout_width="189dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sunny" />
+
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="107dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="monospace"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/white"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/sunnyImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temperatureText2"
+        android:layout_width="107dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="164dp"
+        android:fontFamily="monospace"
+        android:text="°C"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/temperatureText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
