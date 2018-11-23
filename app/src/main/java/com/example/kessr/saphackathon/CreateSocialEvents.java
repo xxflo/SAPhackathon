@@ -5,16 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateSocialEvents extends AppCompatActivity {
     ImageButton imageButton;
     ScrollView scrollViews;
     LinearLayout selectEventType;
     Spinner dropdown;
+    String text;
 
     public void goBack(View view){ // to main screen (different activity)
         //TODO: go back to screen before
@@ -27,7 +33,7 @@ public class CreateSocialEvents extends AppCompatActivity {
 
     // After selecting event type
     public void goNext(View view){
-        String text = dropdown.getSelectedItem().toString();
+        text = dropdown.getSelectedItem().toString();
         if (text.equals("Social")){
             scrollViews = findViewById(R.id.socialEvent);
             scrollViews.setVisibility(View.VISIBLE);
@@ -50,8 +56,25 @@ public class CreateSocialEvents extends AppCompatActivity {
     // CREATED EVENT
     public void goNextTwo(View view){
         //TODO: Social Event is created. Add to Event List
-    }
 
+        Intent intent = new Intent(getApplicationContext(), SocialEvent.class);
+        EditText name = findViewById(R.id.eventName);
+        String eventName = name.getText().toString();
+
+        EditText desc = findViewById(R.id.description);
+        String eventDesc = desc.getText().toString();
+
+        EditText location = findViewById(R.id.location);
+        String eventLocation = location.getText().toString();
+
+        HashMap<String,String> info = new HashMap<>();
+        info.put("event_name", eventName);
+        info.put("event_desc", eventDesc);
+        info.put("event_location", eventLocation);
+
+        intent.putExtra("data",info);
+        startActivityForResult(intent, 100);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
