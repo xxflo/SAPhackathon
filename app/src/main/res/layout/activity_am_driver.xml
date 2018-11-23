@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".AmDriver">
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp"></ListView>
+
     <LinearLayout
         android:id="@+id/pleaseWork"
         android:layout_width="wrap_content"
@@ -25,7 +34,7 @@
             android:onClick="goBack"
             android:scaleType="fitCenter"
             android:visibility="visible"
-            app:srcCompat="@drawable/backbutton" />
+            app:srcCompat="@drawable/addbuton" />
 
         <ImageButton
             android:id="@+id/nextFinal"
@@ -237,11 +246,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"></ListView>
 
 </android.support.constraint.ConstraintLayout>
