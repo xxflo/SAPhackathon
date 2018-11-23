@@ -34,7 +34,7 @@
             android:onClick="goBack"
             android:scaleType="fitCenter"
             android:visibility="visible"
-            app:srcCompat="@drawable/addbuton" />
+            app:srcCompat="@drawable/backbutton" />
 
         <ImageButton
             android:id="@+id/nextFinal"
