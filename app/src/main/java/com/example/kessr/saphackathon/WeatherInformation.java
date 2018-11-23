@@ -53,7 +53,7 @@ public class WeatherInformation extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED){
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, locationListener);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 60000, 0, locationListener);
             }
         }
     }
@@ -94,6 +94,9 @@ public class WeatherInformation extends AppCompatActivity {
         float degrees = toCelsius(Float.parseFloat(currWeather.get("temperature").toString()));
         temperatureText.setText(Integer.toString(Math.round(degrees)));
 
+        TextView summaryText = (TextView)findViewById(R.id.summaryText);
+        summaryText.setText(currWeather.get("summary").toString());
+
         String icon = currWeather.get("icon").toString();
         Log.i("Information", icon);
         if(icon.equals("clear-day") || icon.equals("wind")){
@@ -110,18 +113,19 @@ public class WeatherInformation extends AppCompatActivity {
             cloudyImageView.setVisibility(View.VISIBLE);
             sunnyImageView.setVisibility(View.VISIBLE);
         }else{
-            Log.i("Info", "Hi");
             clearRender();
             cloudyImageView.setVisibility(View.VISIBLE);
         }
         int time = getCurrentTime();
-
+        Log.i("Time", Integer.toString(time));
         if(time>=17 || time<=7){
             weatherNight.setVisibility(View.VISIBLE);
             weatherDay.setVisibility(View.INVISIBLE);
+            Log.i("Info", "Day time");
         }else{
             weatherDay.setVisibility(View.VISIBLE);
             weatherNight.setVisibility(View.INVISIBLE);
+            Log.i("Info", "Night time");
         }
     }
 
@@ -189,7 +193,7 @@ public class WeatherInformation extends AppCompatActivity {
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
         }else{
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 60000, 0, locationListener);
         }
 
         clearRender();

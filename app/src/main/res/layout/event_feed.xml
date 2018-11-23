@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="217dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076">
+
+        <ImageView
+            android:id="@+id/eventBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="219dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/blackx_thumbnail" />
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="164dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="202dp"
+            android:layout_marginBottom="27dp"
+            app:layout_constraintBottom_toBottomOf="@+id/eventBackground"
+            app:layout_constraintEnd_toEndOf="@+id/eventBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/eventBackground"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/saplogo" />
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Title"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            app:layout_constraintStart_toEndOf="@+id/eventImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/eventStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="monospace"
+            android:text="start"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/eventEnd"
+            app:layout_constraintEnd_toEndOf="@+id/eventBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/eventImage"
+            app:layout_constraintTop_toBottomOf="@+id/eventTitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/eventEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="104dp"
+            android:fontFamily="monospace"
+            android:text="end"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eventImage" />
+
+        <TextView
+            android:id="@+id/eventHost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="140dp"
+            android:fontFamily="monospace"
+            android:text="host"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/eventImage"
+            app:layout_constraintTop_toBottomOf="@+id/eventEnd" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
