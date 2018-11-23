@@ -17,9 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SocialEvent extends AppCompatActivity implements Event{
-
-    ArrayList<Event> subevents = new ArrayList<>();
+public class SocialEvent extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

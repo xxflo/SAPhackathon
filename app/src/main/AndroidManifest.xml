@@ -21,8 +21,12 @@
         <activity android:name=".AmDriver" />
         <activity android:name=".CarPoolEvent" />
         <activity android:name=".SocialEvent" />
-        <activity android:name=".HelpDecisionMaking"></activity>
-        <activity android:name=".UserEvents"></activity>
+        <activity android:name=".HelpDecisionMaking" />
+        <activity android:name=".UserEvents" />
+        <activity
+            android:name=".HomeNav"
+            android:label="@string/title_activity_home_nav"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
