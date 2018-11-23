@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeNav">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +44,17 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+        <activity android:name=".AreYouDriver" />
+        <activity android:name=".NeedRide" />
+        <activity android:name=".AmDriver" />
+        <activity android:name=".CarPoolEvent" />
+        <activity android:name=".SocialEvent" />
+        <activity android:name=".HelpDecisionMaking" />
+        <activity android:name=".UserEvents" />
+        <activity
+            android:name=".CreateSocialEvents"
+            android:label="@string/title_activity_home_nav"
+            android:theme="@style/AppTheme" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

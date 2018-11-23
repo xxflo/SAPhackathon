@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">SAP hackathon</string>
-
     <string name="welcome_to_sap_after_work">Welcome to SAP After Work!</string>
 
     <string name="full_name">Full Name</string>
@@ -18,7 +17,8 @@
     <string name="sign_up">Sign Up</string>
 
     <string name="create_event">Create Event</string>
-
-
+    <string name="driver_button">Driver Button</string>
+    <string name="rider_button">Rider Button</string>
+    <string name="title_activity_home_nav">HomeNav</string>
 </resources>
 
