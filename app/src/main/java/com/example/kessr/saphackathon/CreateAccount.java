@@ -1,5 +1,6 @@
 package com.example.kessr.saphackathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -68,6 +69,7 @@ public class CreateAccount extends AppCompatActivity {
         }
 
         Toast.makeText(CreateAccount.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
-        // TODO  setContentView(R.layout.main_user_page);
+        Intent activityChangeIntent = new Intent(CreateAccount.this, MainFeedPage.class);
+        CreateAccount.this.startActivity(activityChangeIntent);
     }
 }
