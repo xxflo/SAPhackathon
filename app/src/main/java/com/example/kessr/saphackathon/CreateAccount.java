@@ -18,6 +18,12 @@ public class CreateAccount extends AppCompatActivity {
     private EditText userEmployeeNum;
     private EditText userTeam;
 
+    public void backButton (View view){
+        Intent returnIntent = new Intent();
+        setResult(RESULT_CANCELED, returnIntent);
+        finish();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +75,7 @@ public class CreateAccount extends AppCompatActivity {
         }
 
         Toast.makeText(CreateAccount.this, "Sign Up Successful!", Toast.LENGTH_LONG).show();
-        Intent activityChangeIntent = new Intent(CreateAccount.this, MainFeedPage.class);
+        Intent activityChangeIntent = new Intent(CreateAccount.this, HomeNav.class);
         CreateAccount.this.startActivity(activityChangeIntent);
     }
 }

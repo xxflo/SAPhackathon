@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         if(loginSuccess){
             Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show();
             fade();
-            Intent activityChangeIntent = new Intent(MainActivity.this, MainFeedPage.class);
+            Intent activityChangeIntent = new Intent(MainActivity.this, HomeNav.class);
             MainActivity.this.startActivity(activityChangeIntent);
         }else{
             Toast.makeText(this, "Login Failed, please try again", Toast.LENGTH_SHORT).show();
