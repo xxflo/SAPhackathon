@@ -20,7 +20,8 @@
         <activity android:name=".NeedRide" />
         <activity android:name=".AmDriver" />
         <activity android:name=".CarPoolEvent" />
-        <activity android:name=".SocialEvent"></activity>
+        <activity android:name=".SocialEvent" />
+        <activity android:name=".HelpDecisionMaking"></activity>
     </application>
 
 </manifest>
