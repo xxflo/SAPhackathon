@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".CreateSocialEvents">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,6 @@
         </activity>
         <activity android:name=".AreYouDriver" />
         <activity android:name=".NeedRide" />
-        <activity android:name=".CreateSocialEvents" />
         <activity android:name=".AmDriver" />
         <activity android:name=".CarPoolEvent" />
         <activity android:name=".SocialEvent"></activity>

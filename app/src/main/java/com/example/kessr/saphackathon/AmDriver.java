@@ -88,7 +88,7 @@ public class AmDriver extends AppCompatActivity {
             textView.setText("Passengers in Need");
             listView.addHeaderView(textView);
             listView.setVisibility(View.VISIBLE);
-            buttons.setVisibility(View.VISIBLE);
+            //buttons.setVisibility(View.VISIBLE);
         }
 
     }
