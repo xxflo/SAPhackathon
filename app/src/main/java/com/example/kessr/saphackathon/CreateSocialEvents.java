@@ -15,7 +15,6 @@ public class CreateSocialEvents extends AppCompatActivity {
     ScrollView scrollViews;
     LinearLayout selectEventType;
     Spinner dropdown;
-    int var = 1; // 1 (Social)/ 2 (Carpool)/ 3(Other)
 
     public void goBack(View view){ // to main screen (different activity)
         //TODO: go back to screen before
@@ -30,19 +29,13 @@ public class CreateSocialEvents extends AppCompatActivity {
     public void goNext(View view){
         String text = dropdown.getSelectedItem().toString();
         if (text.equals("Social")){
-            var = 1;
             scrollViews = findViewById(R.id.socialEvent);
+            scrollViews.setVisibility(View.VISIBLE);
         } else if (text.equals("Carpool")) {
-            var = 2;
             Intent intent = new Intent(getApplicationContext(), AreYouDriver.class);
             startActivityForResult(intent, 100);
-        } else {
-            var = 3;
-            scrollViews = findViewById(R.id.otherEvent);
         }
         selectEventType.setVisibility(View.INVISIBLE);
-        scrollViews.setVisibility(View.VISIBLE);
-
     }
 
     public void addEventImage(View view){
@@ -56,14 +49,7 @@ public class CreateSocialEvents extends AppCompatActivity {
 
     // CREATED EVENT
     public void goNextTwo(View view){
-        //TODO: Event is created. Add to Event List
-        if (var==1) { //social event
-
-        } else if (var==2){ //carpool
-
-        }else if (var == 3){ //other
-
-        }
+        //TODO: Social Event is created. Add to Event List
     }
 
 
@@ -78,7 +64,7 @@ public class CreateSocialEvents extends AppCompatActivity {
         //get the spinner from the xml.
         dropdown = findViewById(R.id.dropDownMenu);
         //create a list of items for the spinner.
-        String[] items = new String[]{"Social", "Carpool", "Others"};
+        String[] items = new String[]{"Social", "Carpool"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
